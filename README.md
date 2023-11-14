@@ -1,5 +1,9 @@
 # Loan Default Prediction: Harnessing Behavioural Insights
 ## Using SQL and Machine Learning
+## Table of Contents
+- [Project Overview](#project-overview)      
+- [Tools](#tools)
+
 ### Project Overview
 Behavioral traits, influenced by spending patterns, psychometric assessments, and personal attributes, contribute significantly to a borrower's financial decision-making process
 
