@@ -1,4 +1,4 @@
-The Code used in this video is below:
+ 
 
 Sub myQuery()
 
