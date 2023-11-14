@@ -1,48 +1,38 @@
-The Code used in this video is below:
+# Loan Default Prediction: Harnessing Behavioural Insights
+## Using SQL and Machine Learning
+### Project Overview
+Behavioral traits, influenced by spending patterns, psychometric assessments, and personal attributes, contribute significantly to a borrower's financial decision-making process
 
-Sub myQuery()
+identify high-risk behaviors, thereby revolutionizing loan default prediction methodologies and fostering more informed lending practices.
 
-Dim connection As New ADODB.connection
+the challenge lies in accurately predicting and preventing loan defaults, 
+fall short in capturing the nuanced behavioral aspects of borrowers that influence their repayment behaviors. 
 
-connection.Open "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & ThisWorkbook.FullName & _
-";Extended Properties=""Excel 12.0;HDR=YES;"";"
+The problem at hand is to develop a robust loan default prediction model that harnesses behavioral insights, delving into the psychological and decision-making aspects of borrowers. 
 
-Dim SQLQuery As String
+how personal attributes, spending behaviors, healthcare insights, legal history, and psychometric assessments collectively contribute to credit risk. 
 
-SQLQuery = InputBox("Enter Select Statement")
+Traditional credit scoring models, while valuable, often lack the ability to capture the intricate behavioral nuances of borrowers that significantly impact their repayment behaviors. 
 
-Dim rs As New ADODB.Recordset
-rs.Open SQLQuery, connection
+model that incorporates a deeper understanding of borrower behavior. 
 
-Dim rSht As Worksheet
-Set rSht = ThisWorkbook.Worksheets("Results")
+This approach aims to empower financial institutions with a more sophisticated, data-driven tool that can make lending decisions based on a deeper understanding of borrower behavior. 
+### Tools
+- MS Excel
+- SQL
+- POWER BI
 
-With rSht
+### Data Sources
 
-.Cells.ClearContents
-For i = 0 To rs.Fields.Count - 1
-.Cells(1, i + 1).Value = rs.Fields(i).Name
-Next i
-.Range("A2").CopyFromRecordset rs
+### Data Analysis
+```sql
+SELECT *FROM Narration
+```
 
-End With
-
-connection.Close
-
-End Sub
+### Results/Findings
 
 
+### Recommendations
 
-Copyright [yyyy] [name of copyright owner]
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+### Limitations
