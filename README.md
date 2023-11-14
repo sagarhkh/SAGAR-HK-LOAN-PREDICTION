@@ -1,8 +1,9 @@
-# Loan Default Prediction: Harnessing Behavioural Insights
+# [Loan Default Prediction: Harnessing Behavioural Insights](#loan-default-prediction-harnessing-behavioural-insights)
 ## Using SQL and Machine Learning
 ## Table of Contents
-- [Project Overview](#project-overview)      
+- [Project Overview](#project-overview)
 - [Tools](#tools)
+- 
 
 ### Project Overview
 ---
