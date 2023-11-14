@@ -63,5 +63,4 @@ SELECT * FROM GITHUB EXCEL CSV WHERE Narration=APOLLOHOSPITAL AND Amount>=30000;
 ### Limitations
 
 ### Reference
-
 [Canara Dacoe Idea](https://canara-dacoethon.hackerearth.com/challenges/hackathon/canara-dacoe-thon/dashboard/8cdb5f3/idea/published/loan-default-prediction-harnessing-non-financial-insights/)
