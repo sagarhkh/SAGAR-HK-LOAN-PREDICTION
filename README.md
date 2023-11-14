@@ -4,7 +4,6 @@
 - [Project Overview](#project-overview)
 - [Tools](#tools)
 - 
-
 ### Project Overview
 ---
 Behavioral traits, influenced by spending patterns, psychometric assessments, and personal attributes, contribute significantly to a borrower's financial decision-making process
@@ -42,10 +41,13 @@ This approach aims to empower financial institutions with a more sophisticated, 
 
 ### Data Analysis ↗️
 ```sql
-SELECT * FROM GITHUB EXCEL CSV WHERE Narration (ECS,UPSTOX,EPPF,GROSS INTCR);RETURN
+SELECT * FROM GITHUB EXCEL CSV WHERE Narration IN (ECS,UPSTOX,EPPF,GROSS INTCR);RETURN
 'Green Flag'
-SELECT * FROM GITHUB EXCEL CSV WHERE Narration (APOLLOHOSPITAL,ZOMATO);RETURN
+SELECT * FROM GITHUB EXCEL CSV WHERE Narration IN (APOLLOHOSPITAL,ZOMATO);RETURN
 'Red Flag'
+SELECT * FROM GITHUB EXCEL CSV WHERE Narration=APOLLOHOSPITAL AND Amount>=30000; RETURN
+'Major Health Issue'
+
 ```
 `column1`
 
@@ -59,3 +61,7 @@ SELECT * FROM GITHUB EXCEL CSV WHERE Narration (APOLLOHOSPITAL,ZOMATO);RETURN
 
 
 ### Limitations
+
+### Reference
+
+[Canara Dacoe Idea](https://canara-dacoethon.hackerearth.com/challenges/hackathon/canara-dacoe-thon/dashboard/8cdb5f3/idea/published/loan-default-prediction-harnessing-non-financial-insights/)
