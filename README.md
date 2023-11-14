@@ -35,7 +35,7 @@ This approach aims to empower financial institutions with a more sophisticated, 
 |UPI/DR/214810301915/APOLLOHOSPITALWHIT/     |6700/- |
 |EPPF TRANSACTION PPF01801000719 NGPLINKCELL |10000/-|
 |UPI/CR/212385128555/ZOMATO LTD/PYTM/**ORDER |356/-  |
-|GROSS INTCR : 141001144301/2               |1718/- |
+|GROSS INTCR : 141001144301/2                |1718/- |
 |SALARY CREDIT FOR MAY-2023                  |56783/-| 
 
 
