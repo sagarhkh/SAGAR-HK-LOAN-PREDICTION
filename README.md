@@ -36,12 +36,16 @@ This approach aims to empower financial institutions with a more sophisticated, 
 |UPI/DR/214810301915/APOLLOHOSPITALWHIT/     |6700/- |
 |EPPF TRANSACTION PPF01801000719 NGPLINKCELL |10000/-|
 |UPI/CR/212385128555/ZOMATO LTD/PYTM/**ORDER |356/-  |
-|GROSS INT CR : 141001144301/2               |1718/- |
+|GROSS INTCR : 141001144301/2               |1718/- |
+|SALARY CREDIT FOR MAY-2023                  |56783/-| 
 
 
 ### Data Analysis ↗️
 ```sql
-SELECT *FROM Narration
+SELECT * FROM GITHUB EXCEL CSV WHERE Narration (ECS,UPSTOX,EPPF,GROSS INTCR);RETURN
+'Green Flag'
+SELECT * FROM GITHUB EXCEL CSV WHERE Narration (APOLLOHOSPITAL,ZOMATO);RETURN
+'Red Flag'
 ```
 `column1`
 
