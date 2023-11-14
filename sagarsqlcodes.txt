@@ -1,0 +1,33 @@
+The Code used in this video is below:
+
+Sub myQuery()
+
+Dim connection As New ADODB.connection
+
+connection.Open "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & ThisWorkbook.FullName & _
+";Extended Properties=""Excel 12.0;HDR=YES;"";"
+
+Dim SQLQuery As String
+
+SQLQuery = InputBox("Enter Select Statement")
+
+Dim rs As New ADODB.Recordset
+rs.Open SQLQuery, connection
+
+Dim rSht As Worksheet
+Set rSht = ThisWorkbook.Worksheets("Results")
+
+With rSht
+
+.Cells.ClearContents
+For i = 0 To rs.Fields.Count - 1
+.Cells(1, i + 1).Value = rs.Fields(i).Name
+Next i
+.Range("A2").CopyFromRecordset rs
+
+End With
+
+connection.Close
+
+End Sub
+--------------------------------------------------------------------------------------------------------------------------------------
