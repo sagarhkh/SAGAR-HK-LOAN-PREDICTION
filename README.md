@@ -29,11 +29,16 @@ This approach aims to empower financial institutions with a more sophisticated, 
 - POWER BI
 
 ### Data Sources 💻
-|Narration|Debit|    
-|---------|-----|
-|swiggy   |350/-|    
-|PPF acct |2000/-|    
-|medical exp|6700/-|
+|Narration                                   |Amount |    
+|--------------------------------------------|-------|
+|ECS INDIANENERGYEXCHANGE                    |350/-  |    
+|UPI/DR/213837071375/UPSTOX/ICIC/            |2000/- |    
+|UPI/DR/214810301915/APOLLOHOSPITALWHIT/     |6700/- |
+|EPPF TRANSACTION PPF01801000719 NGPLINKCELL |10000/-|
+|UPI/CR/212385128555/ZOMATO LTD/PYTM/**ORDER |356/-  |
+|GROSS INT CR : 141001144301/2               |1718/- |
+
+
 ### Data Analysis ↗️
 ```sql
 SELECT *FROM Narration
