@@ -78,3 +78,6 @@ SELECT * FROM GITHUB EXCEL CSV WHERE Narration IN (APOLLOHOSPITAL,ZOMATO);RETURN
 
 ### Reference
 [Canara Dacoe Idea](https://canara-dacoethon.hackerearth.com/challenges/hackathon/canara-dacoe-thon/dashboard/8cdb5f3/idea/published/loan-default-prediction-harnessing-non-financial-insights/)
+
+[Youtube video link](https://youtu.be/NczwkNBXV0E?si=jPU5I9YjIVEKWsn9)
+
