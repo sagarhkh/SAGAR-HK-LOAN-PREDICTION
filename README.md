@@ -70,6 +70,11 @@ GROUP BY Red Flag Count;
 
  This approach ensures that the essential information is retained while addressing the challenges associated with large and complex datasets, ultimately improving the accuracy and effectiveness of the loan prediction process.
 
+### Visualisation:
+![SPENDING PATTERN-MONTH WISE DATA JPEG1](https://github.com/sagarhkh/sagarsql/assets/81975233/6b7087e7-5a3c-45bb-97cb-90d39fa8154a)
+
+ ![SPENDING PATTERN-MONTH WISE DATA JPG 2](https://github.com/sagarhkh/sagarsql/assets/81975233/a377b770-ffaf-4700-aa1f-8549d17e5e90)
+
 
 
 ### Results/Findings
