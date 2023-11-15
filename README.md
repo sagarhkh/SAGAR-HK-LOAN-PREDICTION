@@ -9,8 +9,8 @@ This approach aims to empower financial institutions with a more sophisticated, 
 
 ### Tools 🧰
 - MS Excel
-- Machine Learning-Prinipal Component Analysis
 - SQL
+- Machine Learning-Prinipal Component Analysis
 - POWER BI
 
 ### Data Sources 💻
