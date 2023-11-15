@@ -15,6 +15,8 @@ This approach aims to empower financial institutions with a more sophisticated, 
 
 ### Data Sources 💻
 Real time transactions of customers are fetched from CBS with relevant details which are then sorted for **$\color{green}{Green Flags}$** and **$\color{red}{Red Flags}$** using SQL.    
+- Transaction entries such as EPPF,INT on savings,Dividend credits are marked as  **$\color{green}{Green Flags}$**  
+- Transaction entries such as APOLLOHOSPITAL,ZOMATO are marked as **$\color{red}{Red Flags}$** 
 
 |Date      |Time   |Narration                                   |Amount |    
 |----------|-------|--------------------------------------------|-------|
@@ -33,17 +35,8 @@ SELECT * FROM GITHUB EXCEL CSV WHERE Narration IN (ECS,UPSTOX,EPPF,GROSS INTCR);
 'Green Flag'
 SELECT * FROM GITHUB EXCEL CSV WHERE Narration IN (APOLLOHOSPITAL,ZOMATO);RETURN
 'Red Flag'
-SELECT Narration, COUNT(Red Flag Count) AS occurrences
-FROM GITHUB EXCEL CSV
-GROUP BY Red Flag Count;
-SELECT * FROM GITHUB EXCEL CSV WHERE Narration=APOLLOHOSPITAL AND Amount>=30000; RETURN
-'Major Health Issue'
-SELECT Narration, COUNT(Red Flag Count) AS occurrences
-FROM GITHUB EXCEL CSV
-GROUP BY Red Flag Count;
-
- 
 ```
+
 ### Machine Learning
 **Dimensionality Reduction:**
 
