@@ -2,7 +2,7 @@
  
 ## Project Overview
 ---
-High value loans will be on our balance sheet on an average of 15-30 years its equally important for a lending institution to monitor the borrower in both financial and non financial aspects through out the tenure of the loan. Since the traditional loan default model cover all the financial aspects our model highlights the non-financial/behavioural aspects of the borrower.
+High value loans will be on our balance sheet on an average of 15-30 years its important for a lending Institution to monitor the borrower in both financial and non financial aspects through out the tenure of the loan. Since the traditional loan default model cover all the financial aspects our model highlights the non-financial/behavioural aspects of the borrower.
 Behavioral traits, personal attributes, spending patterns, healthcare insights, legal history, and psychometric assessments collectively influence  a borrower's financial decision-making process and fostering more informed lending practices.
 The problem at hand is to develop a robust loan default prediction model that harnesses behavioral insights, delving into the psychological and decision-making aspects of borrowers.
 This approach aims to empower financial institutions with a more sophisticated, data-driven tool that can make lending decisions based on a deeper understanding of borrower behavior.
