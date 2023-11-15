@@ -1,61 +1,39 @@
 
  
----------
- 
-
-——————
-
+-- Checking transaction activities in Daytime hours
 SELECT
     CASE
-        WHEN narrative LIKE '%hospital%' OR narrative LIKE '%medical expenses%' THEN
+        WHEN Narration LIKE '%hospital%' OR Narration LIKE '%medical expenses%' THEN
             CASE
                 WHEN strftime('%H:%M:%S', time) >= '00:00:00' AND strftime('%H:%M:%S', time) < '03:00:00' THEN 'midnight hour'
                 ELSE 'daytime'
             END
         ELSE 'daytime'
     END AS time_category
-FROM [data sb$];
+FROM [GITHUB EXCEL CSV$];
 
-————-
--- Assuming your Excel file is connected to SQLite
--- If you're using a different database, syntax may vary
 
--- Compare the time column for "hospital" and "medical expenses" and retu
+-- Checking transaction activities in midnight hours
 SELECT
     CASE
-        WHEN narrative LIKE '%hospital%' AND strftime('%H:%M:%S', time) >= '00:00:00' AND strftime('%H:%M:%S', time) < '03:00:00' THEN 'midnight hour'
-        WHEN narrative LIKE '%medical expenses%' AND strftime('%H:%M:%S', time) >= '00:00:00' AND strftime('%H:%M:%S', time) < '03:00:00' THEN 'midnight hour'
+        WHEN Narration LIKE '%zomato%' AND strftime('%H:%M:%S', time) >= '00:00:00' AND strftime('%H:%M:%S', time) < '03:00:00' THEN 'midnight hour'
+        WHEN Narration LIKE '%ola/uber%' AND strftime('%H:%M:%S', time) >= '00:00:00' AND strftime('%H:%M:%S', time) < '03:00:00' THEN 'midnight hour'
         ELSE NULL -- or provide another default value
     END AS midnight_hour
-FROM [data sb$];
+FROM [GITHUB EXCEL CSV$];
 ———-
--- Assuming your Excel file is connected to SQLite
--- If you're using a different database, syntax may vary
-
--- Calculate the count for each keyword and sum them up
-SELECT
-    SUM(
-        CASE
-            WHEN narrative LIKE '%hospital%' THEN 1
-            WHEN narrative LIKE '%Zomato%' THEN 1
-            WHEN narrative LIKE '%Swiggy%' THEN 1
-            WHEN narrative LIKE '%medical expenses%' THEN 1
-            WHEN narrative LIKE '%hotel%' THEN 1
-            ELSE 0
-        END
-    ) AS red_flags
-FROM [data sb$];
-
-——-
-
+ 
  
 -- Calculate the count for each keyword and sum them up
 SELECT
-    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%hospital%') +
-    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%Zomato%') +
-    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%Swiggy%') +
-    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%medical expenses%') +
-    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%hotel%') AS red_flags;
+    (SELECT COUNT(*) FROM [GITHUB EXCEL CSV$] WHERE Narration LIKE '%hospital%') +
+    (SELECT COUNT(*) FROM [GITHUB EXCEL CSV$] WHERE Narration LIKE '%Zomato%') +
+    (SELECT COUNT(*) FROM [GITHUB EXCEL CSV$] WHERE Narration LIKE '%Swiggy%') +
+    (SELECT COUNT(*) FROM [GITHUB EXCEL CSV$] WHERE Narration LIKE '%medical expenses%') +
+    (SELECT COUNT(*) FROM [GITHUB EXCEL CSV$] WHERE Narration LIKE '%hotel%') AS red_flags;
 
-
-——
+ -- Count occurrences and calculate sum of all red flag expenses to variable-"red_flag_expense"
+SELECT
+    COUNT(CASE WHEN Narration LIKE '%hospital%' OR Narration LIKE '%Zomato%' OR Narration LIKE '%Swiggy%' OR Narration LIKE '%medical expenses%' OR Narration LIKE '%hotel%' THEN 1 END) AS red_flags,
+    SUM(amount) AS red_flag_expense
+FROM [GITHUB EXCEL CSV$];
