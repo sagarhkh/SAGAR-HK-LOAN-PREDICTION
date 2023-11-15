@@ -16,7 +16,7 @@ This approach aims to empower financial institutions with a more sophisticated, 
 ### Data Sources 💻
 Real time transactions of customers are fetched from CBS with relevant details which are then sorted for **$\color{green}{Green Flags}$** and **$\color{red}{Red Flags}$** using SQL.    
 - Transaction entries such as EPPF,INT on savings,Dividend credits are marked as  **$\color{green}{Green Flags}$**  
-- Transaction entries such as APOLLOHOSPITAL,ZOMATO are marked as **$\color{red}{Red Flags}$** 
+- Transaction activities during **$\color{red}{midnight hours}$** and entries such as APOLLOHOSPITAL,ZOMATO are marked as **$\color{red}{Red Flags}$** 
 
 |Date      |Time   |Narration                                   |Amount |    
 |----------|-------|--------------------------------------------|-------|
