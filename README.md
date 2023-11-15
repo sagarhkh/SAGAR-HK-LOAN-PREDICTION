@@ -1,6 +1,6 @@
 # [Loan Default Prediction: Harnessing Behavioural Insights](#loan-default-prediction-harnessing-behavioural-insights)
  
-## Project Overview
+## Project Overview📽️
 ---
 High value loans will be on our balance sheet on an average of 15-30 years its important for a lending Institution to monitor the borrower in both financial and non financial aspects through out the tenure of the loan. Since the traditional loan default model cover all the financial aspects our model highlights the non-financial/behavioural aspects of the borrower.
 Behavioral traits, personal attributes, spending patterns, healthcare insights, legal history, and psychometric assessments collectively influence  a borrower's financial decision-making process and fostering more informed lending practices.
@@ -13,10 +13,8 @@ This approach aims to empower financial institutions with a more sophisticated, 
 - Machine Learning-Prinipal Component Analysis
 - POWER BI
 
-### Data Sources 💻
-Real time transactions of customers are fetched from CBS with relevant details which are then sorted for **$\color{green}{Green Flags}$** and **$\color{red}{Red Flags}$** using SQL.    
-- Transaction entries such as EPPF,INT on savings,Dividend credits are marked as  **$\color{green}{Green Flags}$**.  
-- Transaction activities during **$\color{red}{midnight hours}$** and entries such as APOLLOHOSPITAL,ZOMATO are marked as **$\color{red}{Red Flags}$**. 
+### Data Sources 📂
+Real time transactions of customers with relevant details are fetched from CBS. 
 
 |Date      |Time   |Narration                                   |Amount |    
 |----------|-------|--------------------------------------------|-------|
@@ -29,7 +27,11 @@ Real time transactions of customers are fetched from CBS with relevant details w
 |03.08.2023|11:03pm|SALARY CREDIT FOR MAY-2023                  |56783/-| 
 
 
-### Data Analysis ↗️
+### Data Analysis using SQL↗️
+The data is then sorted for **$\color{green}{Green Flags}$** and **$\color{red}{Red Flags}$** using SQL.    
+- Transaction entries such as EPPF,INT on savings,Dividend credits are marked as  **$\color{green}{Green Flags}$**.  
+- Transaction activities during **$\color{red}{midnight hours}$** and entries such as APOLLOHOSPITAL,ZOMATO are marked as **$\color{red}{Red Flags}$**. 
+
 ```sql
 SELECT * FROM GITHUB EXCEL CSV WHERE Narration IN (ECS,UPSTOX,EPPF,GROSS INTCR);RETURN
 'Green Flag'
@@ -37,7 +39,7 @@ SELECT * FROM GITHUB EXCEL CSV WHERE Narration IN (APOLLOHOSPITAL,ZOMATO);RETURN
 'Red Flag'
 ```
 
-### Machine Learning
+### Machine Learning📚
 **Dimensionality Reduction:**
 
 **Challenge**: Huge datasets with numerous spending-related features can lead to a complex and computationally demanding model.                         
@@ -61,7 +63,7 @@ SELECT * FROM GITHUB EXCEL CSV WHERE Narration IN (APOLLOHOSPITAL,ZOMATO);RETURN
 
  This approach ensures that the essential information is retained while addressing the challenges associated with large and complex datasets, ultimately improving the accuracy and effectiveness of the loan prediction process.
 
-### Visualisation:
+### Visualisation📺
 ![SPENDING PATTERN-MONTH WISE DATA JPEG1](https://github.com/sagarhkh/sagarsql/assets/81975233/6b7087e7-5a3c-45bb-97cb-90d39fa8154a)
 
  ![SPENDING PATTERN-MONTH WISE DATA JPG 2](https://github.com/sagarhkh/sagarsql/assets/81975233/a377b770-ffaf-4700-aa1f-8549d17e5e90)
@@ -76,7 +78,7 @@ SELECT * FROM GITHUB EXCEL CSV WHERE Narration IN (APOLLOHOSPITAL,ZOMATO);RETURN
 
 ### Limitations:
 
-### Reference
+### Reference 📹
 [Canara Dacoe Idea](https://canara-dacoethon.hackerearth.com/challenges/hackathon/canara-dacoe-thon/dashboard/8cdb5f3/idea/published/loan-default-prediction-harnessing-non-financial-insights/)
 
 [Youtube video link](https://youtu.be/NczwkNBXV0E?si=jPU5I9YjIVEKWsn9)
