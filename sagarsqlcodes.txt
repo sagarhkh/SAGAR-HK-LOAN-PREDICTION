@@ -1,33 +1,114 @@
- 
 
-Sub myQuery()
+SELECT
+    CASE
+        WHEN narrative LIKE '%hospital%' OR narrative LIKE '%medical expenses%' THEN
+            CASE
+                WHEN strftime('%H:%M:%S', time) >= '00:00:00' AND strftime('%H:%M:%S', time) < '03:00:00' THEN 'midnight hour'
+                ELSE 'daytime'
+            END
+        ELSE 'daytime'
+    END AS time_category
+FROM [data sb$];
 
-Dim connection As New ADODB.connection
+---------
 
-connection.Open "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & ThisWorkbook.FullName & _
-";Extended Properties=""Excel 12.0;HDR=YES;"";"
+SELECT
+    CASE
+        WHEN narrative LIKE '%hospital%' OR narrative LIKE '%medical expenses%' THEN
+            CASE
+                WHEN strftime('%H:%M:%S', time) >= '00:00:00' AND strftime('%H:%M:%S', time) < '03:00:00' THEN 'midnight hour'
+                ELSE 'daytime'
+            END
+        ELSE 'daytime'
+    END AS time_category
+FROM [data sb$];
 
-Dim SQLQuery As String
+——————
 
-SQLQuery = InputBox("Enter Select Statement")
+SELECT
+    CASE
+        WHEN narrative LIKE '%hospital%' OR narrative LIKE '%medical expenses%' THEN
+            CASE
+                WHEN strftime('%H:%M:%S', time) >= '00:00:00' AND strftime('%H:%M:%S', time) < '03:00:00' THEN 'midnight hour'
+                ELSE 'daytime'
+            END
+        ELSE 'daytime'
+    END AS time_category
+FROM [data sb$];
 
-Dim rs As New ADODB.Recordset
-rs.Open SQLQuery, connection
+————-
+-- Assuming your Excel file is connected to SQLite
+-- If you're using a different database, syntax may vary
 
-Dim rSht As Worksheet
-Set rSht = ThisWorkbook.Worksheets("Results")
+-- Compare the time column for "hospital" and "medical expenses" and retu
+SELECT
+    CASE
+        WHEN narrative LIKE '%hospital%' AND strftime('%H:%M:%S', time) >= '00:00:00' AND strftime('%H:%M:%S', time) < '03:00:00' THEN 'midnight hour'
+        WHEN narrative LIKE '%medical expenses%' AND strftime('%H:%M:%S', time) >= '00:00:00' AND strftime('%H:%M:%S', time) < '03:00:00' THEN 'midnight hour'
+        ELSE NULL -- or provide another default value
+    END AS midnight_hour
+FROM [data sb$];
+———-
+-- Assuming your Excel file is connected to SQLite
+-- If you're using a different database, syntax may vary
 
-With rSht
+-- Calculate the count for each keyword and sum them up
+SELECT
+    SUM(
+        CASE
+            WHEN narrative LIKE '%hospital%' THEN 1
+            WHEN narrative LIKE '%Zomato%' THEN 1
+            WHEN narrative LIKE '%Swiggy%' THEN 1
+            WHEN narrative LIKE '%medical expenses%' THEN 1
+            WHEN narrative LIKE '%hotel%' THEN 1
+            ELSE 0
+        END
+    ) AS red_flags
+FROM [data sb$];
 
-.Cells.ClearContents
-For i = 0 To rs.Fields.Count - 1
-.Cells(1, i + 1).Value = rs.Fields(i).Name
-Next i
-.Range("A2").CopyFromRecordset rs
+——-
 
-End With
+-- Assuming your Excel file is connected to SQLite
+-- If you're using a different database, syntax may vary
 
-connection.Close
+-- Calculate the count for each keyword and sum them up
+SELECT
+    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%hospital%') +
+    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%Zomato%') +
+    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%Swiggy%') +
+    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%medical expenses%') +
+    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%hotel%') AS red_flags;
 
-End Sub
---------------------------------------------------------------------------------------------------------------------------------------
+———-
+
+
+
+-- Assuming your Excel file is connected to SQLite
+-- If you're using a different database, syntax may vary
+
+-- Calculate the count for each keyword and sum them up
+SELECT
+    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%hospital%') +
+    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%Zomato%') +
+    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%Swiggy%') +
+    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%medical expenses%') +
+    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%hotel%') AS red_flags;
+
+
+
+——-
+
+
+-- Assuming your Excel file is connected to SQLite
+-- If you're using a different database, syntax may vary
+
+-- Calculate the count for each keyword and sum them up
+SELECT
+    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%hospital%') +
+    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%Zomato%') +
+    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%Swiggy%') +
+    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%medical expenses%') +
+    (SELECT COUNT(*) FROM [data sb$] WHERE narrative LIKE '%hotel%') AS red_flags;
+
+
+——
