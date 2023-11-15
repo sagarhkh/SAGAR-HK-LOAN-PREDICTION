@@ -1,10 +1,6 @@
 # [Loan Default Prediction: Harnessing Behavioural Insights](#loan-default-prediction-harnessing-behavioural-insights)
-## Using SQL and Machine Learning
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Tools](#tools)
-- 
-### Project Overview
+ 
+## Project Overview
 ---
 High value loans will be on our balance sheet on an average of 15-30 years its equally important for a lending institution to monitor the borrower in both financial and non financial aspects through out the tenure of the loan. Since the traditional loan default model cover all the financial aspects our model highlights the non-financial/behavioural aspects of the borrower.
 Behavioral traits, personal attributes, spending patterns, healthcare insights, legal history, and psychometric assessments collectively influence  a borrower's financial decision-making process and fostering more informed lending practices.
@@ -18,6 +14,8 @@ This approach aims to empower financial institutions with a more sophisticated, 
 - POWER BI
 
 ### Data Sources 💻
+Real time transactions of customers are fetched from CBS with relevant details which are then sorted for **$\color{green}{Green Flags}$** and **$\color{red}{Red Flags}$** using SQL.    
+
 |Date      |Time   |Narration                                   |Amount |    
 |----------|-------|--------------------------------------------|-------|
 |09.04.2023|11:03am|ECS INDIANENERGYEXCHANGE                    |350/-  |    
