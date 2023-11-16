@@ -12,6 +12,7 @@ Our model collects historical transaction activities of the potensial high value
 #### **$\color{red}{Red Flags}$**:Using keywords related to hospitalisation,medical insurance claims,high value online shopping,day trading,online betting activities,frequent food orders(zomato,swiggy)/office commute(ola/uber) during late night would be a risk to the health of the customer and to the bank financially in the long run.
 *Historical transaction activities of the deceased customers (Death claimed accounts) can be used to correlate the results.
 #### **$\color{green}{Green Flags}$**:Keywords related to investing such as Dividend credits,SI to PPF/PF/NPS/SIP/MF/upstox/IND money,GYM memberships would classify the customer to be fit physically and financially. 
+#### **$\color{blue}{Psychometric-profiling}$**:Evaluates customer's behavioral and pyschological traits,providing insights into thier Risk Assessment,Financial Discipline,Stress Handling,Long term planning,Decision Making Patterns,Financial Literacy.A set of 20 crafted questions in a questionnaire can be developed to gather the above insights.
 
 
 ### Tools 🧰
