@@ -8,8 +8,9 @@ The problem at hand is to develop a robust loan default prediction model that ha
 This approach aims to empower financial institutions with a more sophisticated, data-driven tool that can make lending decisions based on a deeper understanding of borrower behavior.
 
 ## Model Logic🧠
-Our model collects transaction activities of the high value loan eligible customers and real time transaction activities of existing customers in real time.Data is then seggregated into the following:                     
-#### **$\color{red}{Red Flags}$**:Using keywords related to hospitalisation,medical insurance claims,high value online shopping,day trading,online betting activities,frequent food orders(zomato,swiggy)/office commute(ola/uber) during late night would be a risk to the health of the customer and to the bank financially in the long run.  
+Our model collects historical transaction activities of the potensial high value loan eligible customers and real time transaction activities of existing loan customers in real time.Data is then seggregated into the following:                     
+#### **$\color{red}{Red Flags}$**:Using keywords related to hospitalisation,medical insurance claims,high value online shopping,day trading,online betting activities,frequent food orders(zomato,swiggy)/office commute(ola/uber) during late night would be a risk to the health of the customer and to the bank financially in the long run.
+*Historical transaction activities of the deceased customers (Death claimed accounts) can be used to correlate the results.
 #### **$\color{green}{Green Flags}$**:Keywords related to investing such as Dividend credits,SI to PPF/PF/NPS/SIP/MF/upstox/IND money,GYM memberships would classify the customer to be fit physically and financially. 
 
 
