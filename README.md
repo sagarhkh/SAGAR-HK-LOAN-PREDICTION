@@ -78,7 +78,9 @@ SELECT * FROM GITHUB EXCEL CSV WHERE Narration IN (APOLLOHOSPITAL,ZOMATO);RETURN
 
 
 
-### Results/Findings
+### Scalability
+
+How India spends is a strong indicator of income, the changing demographics and aspirations of users across the country.
 
 
 ### Recommendations
