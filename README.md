@@ -85,6 +85,7 @@ SELECT * FROM GITHUB EXCEL CSV WHERE Narration IN (APOLLOHOSPITAL,ZOMATO);RETURN
 
 
 ### Limitations:
+Since the model is dealing with large real time dataset which are not labelled in many cases we can advice Unified Payment Interface (UPI) apps to introduce mnemonic codes in the transaction id as it would be more authentic and  convenient to identify and segregate them into respective  **$\color{green}{Green Flags}$**/**$\color{red}{Red Flags}$** indicators.   
 
 ### Reference 📹
 [Canara Dacoe Idea](https://canara-dacoethon.hackerearth.com/challenges/hackathon/canara-dacoe-thon/dashboard/8cdb5f3/idea/published/loan-default-prediction-harnessing-non-financial-insights/)
