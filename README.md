@@ -90,6 +90,7 @@ With increase in the no of bank accounts opened and no of UPI users skyrocketing
 -Learning from historical spending activities of successful individuals using the same as a benchmark.
 
 
+
 ### Limitations:
 Since the model is dealing with large real time dataset which are not labelled in many cases we can advice Unified Payment Interface (UPI) apps to introduce mnemonic codes in the transaction id as it would be more authentic and  convenient to identify and segregate them into respective  **$\color{green}{Green Flags}$**/**$\color{red}{Red Flags}$** indicators.   
 
