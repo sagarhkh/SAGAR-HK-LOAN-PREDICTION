@@ -86,8 +86,8 @@ With increase in the no of bank accounts opened and no of UPI users skyrocketing
 
 
 ### Recommendations
--How spending activities can make a person rich or poor use this predictive analysis during lending.
--Learning from spending activities of successful individuals.
+-How spending activities can make a person rich or poor use this predictive analysis during lending.  
+-Learning from historical spending activities of successful individuals using the same as a benchmark.
 
 
 ### Limitations:
