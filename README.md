@@ -81,6 +81,7 @@ SELECT * FROM GITHUB EXCEL CSV WHERE Narration IN (APOLLOHOSPITAL,ZOMATO);RETURN
 ### Scalability
 Transaction data gives insights into demographic spending patterns giving banks more deep understanding of spending behaviors based on age groups, metro/ non-metro regions,  
 How India spends is a strong indicator of income, the changing demographics and aspirations of users across the country.
+With increase in the no of bank accounts opened and no of UPI users skyrocketing every year all over India, this gives us more data to look into customer spending habits not only in urban parts but in rural parts as well.
 
 
 ### Recommendations
