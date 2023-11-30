@@ -17,6 +17,7 @@ Our model collects historical transaction activities of the potensial high value
 
 ### Tools 🧰
 - MS Excel
+- Python_Pandas
 - SQL
 - Machine Learning-Prinipal Component Analysis
 - POWER BI
