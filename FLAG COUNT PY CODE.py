@@ -1,4 +1,5 @@
 import pandas as pd 
+import matplotlib.pyplot as plt
 
 # Load the Excel file named GITHUBEXCELCSV from documents folder 
 excel=pd.read_csv('~/Documents/Python/GITHUBEXCELCSV.csv')
@@ -34,3 +35,35 @@ print("Red Flags Count:", red_flags_count)
 print("Red Flags Sum:", red_flags_sum)
 print("Green Flags Count:", green_flags_count)
 print("Green Flags Sum:", green_flags_sum)
+
+
+
+# Plotting bar graph
+fig, ax = plt.subplots()
+
+# Bar heights
+red_flags_data = [red_flags_count, red_flags_sum]
+green_flags_data = [green_flags_count, green_flags_sum]
+
+# Bar positions
+bar_positions = range(2)
+
+# Bar labels
+bar_labels = ['Count', 'Sum']
+
+# Plotting red flags
+ax.bar([pos - 0.2 for pos in bar_positions], red_flags_data, width=0.4, label='Red Flags', color='red')
+# Plotting green flags
+ax.bar([pos + 0.2 for pos in bar_positions], green_flags_data, width=0.4, label='Green Flags', color='green')
+
+# Adding labels and title
+ax.set_xticks(bar_positions)
+ax.set_xticklabels(bar_labels)
+ax.set_ylabel('Value')
+ax.set_title('Red and Green Flags Analysis')
+
+# Adding legend
+ax.legend()
+
+# Show the plot
+plt.show()
